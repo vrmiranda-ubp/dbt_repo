@@ -9,9 +9,9 @@
         SELECT *
         FROM {{ source('T1', 'customer') }}
     )
-    SELECT C_NAME
+    SELECT C_CUSTKEY
         , SUM(O_TOTALPRICE) AS TOTAL_PRICE
     FROM ord
     JOIN cust
     ON ord.O_CUSTKEY = cust.C_CUSTKEY
-    GROUP BY C_NAME
+    GROUP BY C_CUSTKEY
