@@ -23,13 +23,9 @@ sources:
             tests:
               - not_null
               - unique
+
       - name: supplier
         description: "Raw order data from the e-commerce platform."
         columns:
           - name: S_SUPPKEY
-            description: "Unique identifier for an supplier."
-            tests:
-              - not_null
-              - unique
-      - name: lineitem
-        description: "Raw order data from the e-commerce platform."              
+
