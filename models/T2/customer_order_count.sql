@@ -1,0 +1,17 @@
+    -- customer_summary.sql
+    {{ config(materialized='view') }} -- or 'table' for a materialized table
+
+    WITH ord AS (
+        SELECT *
+        FROM {{ source('T1', 'orders') }} 
+    ),
+    cust AS (
+        SELECT *
+        FROM {{ source('T1', 'customer') }}
+    )
+    SELECT C_CUSTKEY
+        , SUM(O_TOTALPRICE) AS TOTAL_PRICE
+    FROM ord
+    JOIN cust
+    ON ord.O_CUSTKEY = cust.C_CUSTKEY
+    GROUP BY C_CUSTKEY
