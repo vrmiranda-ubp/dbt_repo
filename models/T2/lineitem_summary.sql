@@ -5,7 +5,7 @@
         SELECT *
         FROM {{ source('T1', 'lineitem') }}
     )
-    SELECT O_CUSTKEY
+    SELECT L_ORDERKEY
         , COUNT(*) AS LINE_COUNT
     FROM summary
     GROUP BY L_ORDERKEY
