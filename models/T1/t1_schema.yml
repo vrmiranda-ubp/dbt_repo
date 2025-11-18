@@ -22,11 +22,16 @@ sources:
             tests:
               - not_null
               - unique
+<<<<<<< HEAD
               
+=======
+
+>>>>>>> 407a6822d2a9bba673c251de9caffde464300c14
       - name: supplier
         description: "Raw Supplier data from the e-commerce platform."
         columns:
           - name: S_SUPPKEY
+<<<<<<< HEAD
             description: "Unique identifier for a supplier."
             tests:
               - not_null
@@ -40,3 +45,6 @@ sources:
             tests:
               - not_null
               
+=======
+
+>>>>>>> 407a6822d2a9bba673c251de9caffde464300c14
