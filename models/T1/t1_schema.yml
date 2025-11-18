@@ -1,5 +1,4 @@
 version: 2
-
 sources:
   - name: T1
     database: snowflake_sample_data
@@ -23,13 +22,21 @@ sources:
             tests:
               - not_null
               - unique
+              
       - name: supplier
-        description: "Raw order data from the e-commerce platform."
+        description: "Raw Supplier data from the e-commerce platform."
         columns:
           - name: S_SUPPKEY
-            description: "Unique identifier for an supplier."
+            description: "Unique identifier for a supplier."
             tests:
               - not_null
               - unique
+
       - name: lineitem
-        description: "Raw order data from the e-commerce platform."              
+        description: "Raw Lineitem data from the e-commerce platform."
+        columns:
+          - name: L_ORDERKEY
+            description: "Unique identifier for an Lineitem."
+            tests:
+              - not_null
+              

@@ -1,4 +1,4 @@
--- my_sample_model.sql
+-- lineitem.sql
 {{ config(materialized='table') }} -- or 'table' for a materialized table
 
 with source_lineitem as (
