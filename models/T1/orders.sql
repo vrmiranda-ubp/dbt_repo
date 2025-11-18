@@ -1,4 +1,4 @@
--- my_sample_model.sql
+-- orders.sql
 {{ config(materialized='table') }} -- or 'table' for a materialized table
 
 with source_orders as (
