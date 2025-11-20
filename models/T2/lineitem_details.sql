@@ -7,4 +7,3 @@
     )
     SELECT *
     FROM summary
-    GROUP BY L_ORDERKEY
