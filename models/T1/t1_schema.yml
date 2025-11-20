@@ -37,3 +37,10 @@ sources:
             description: "Unique identifier for an Lineitem."
             tests:
               - not_null
+      - name: nation
+        description: "Raw Lineitem data from the e-commerce platform."
+        columns:
+          - name: N_NATIONKEY
+            description: "Unique identifier for an Lineitem."
+            tests:
+              - not_null              
