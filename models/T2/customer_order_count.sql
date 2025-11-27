@@ -15,3 +15,4 @@
     JOIN cust
     ON ord.O_CUSTKEY = cust.C_CUSTKEY
     GROUP BY C_CUSTKEY
+    
