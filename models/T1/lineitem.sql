@@ -1,3 +1,5 @@
+{{ config(materialized='table') }} -- or 'table' for a materialized table
+
 -- lineitem.sql
 {{ config(materialized='table') }} -- or 'table' for a materialized table
 
