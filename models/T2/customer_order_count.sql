@@ -1,5 +1,5 @@
     -- customer_summary.sql
-    {{ config(materialized='view') }} -- or 'table' for a materialized table
+    {{ config(materialized='table') }} -- or 'table' for a materialized table
 
     WITH ord AS (
         SELECT *
