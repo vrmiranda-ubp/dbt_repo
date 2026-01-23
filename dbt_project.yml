@@ -36,9 +36,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
+  warehouse: 'COMPUTE_WH'
   dbt_artifacts:
     +enabled: true
     sources:
-      +enabled: true              
+      +enabled: true
+      +database: SNOWFLAKE_LEARNING_DB
+      +schema: DBT_ARTIFACTS                    
 on-run-end:
   - "{{ dbt_artifacts.upload_results(results) }}"
