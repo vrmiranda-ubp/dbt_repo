@@ -2,7 +2,7 @@
 {{
     config(
         materialized="table",
-        snowflake_warehouse=env_var("COMPUTE_WH")
+        snowflake_warehouse='COMPUTE_WH'
     )
 }}
 
