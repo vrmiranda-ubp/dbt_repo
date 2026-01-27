@@ -1,6 +1,6 @@
 {{
     config(
-        materialized="materialize",
+        materialized="table",
         snowflake_warehouse='COMPUTE_WH'
     )
 }}
