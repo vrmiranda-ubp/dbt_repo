@@ -1,6 +1,6 @@
 {{
     config(
-        materialized="incremental",
+        materialized="materialize",
         snowflake_warehouse='COMPUTE_WH'
     )
 }}
