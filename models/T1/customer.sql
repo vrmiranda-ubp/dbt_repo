@@ -1,7 +1,7 @@
 -- customer.sql
 {{
     config(
-        materialized="table",
+        materialized="incremental",
         snowflake_warehouse='COMPUTE_WH'
     )
 }}
