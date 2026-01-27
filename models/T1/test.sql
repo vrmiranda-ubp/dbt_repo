@@ -5,4 +5,4 @@
     )
 }}
 
-select env_var("env_attrib") as _audit_run_id
+select {{ env_var('YOUR_VARIABLE_NAME', 1) }} as _audit_run_id
