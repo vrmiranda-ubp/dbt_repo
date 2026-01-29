@@ -1,5 +1,10 @@
 -- customer.sql
-{{ config(materialized='table') }} -- or 'table' for a materialized table
+{{
+    config(
+        materialized="incremental",
+        snowflake_warehouse='COMPUTE_WH'
+    )
+}}
 
 with source_orders as (
     select *
