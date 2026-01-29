@@ -2,7 +2,7 @@ version: 2
 sources:
   - name: T1
     database: snowflake_sample_data
-    schema: tpch_sf2
+    schema: tpch_sf10
     tables:
       - name: customer
         description: "Raw customer data from the CRM system."
