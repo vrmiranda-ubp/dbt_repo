@@ -1,8 +1,16 @@
 {{
     config(
-        materialized="table",
-        snowflake_warehouse='COMPUTE_WH'
+        materialized="incremental",
+        tags=['test'],
+        enabled=true,
+        event_time='O_ORDERDATE',
+        full_refresh = true,
+        snowflake_warehouse='COMPUTE_WH'        
     )
 }}
 
-select '{{ env_var('DBT_WH_ME', NULL) }}' as _audit_run_id
+select *
+from {{ source('T1', 'orders') }}
+{% if is_incremental() %}
+  -- dbt automatically adds the filter here
+{% endif %}
