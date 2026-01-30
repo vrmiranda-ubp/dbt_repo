@@ -9,7 +9,7 @@
 {{
     config(
         materialized="incremental",
-        unique_key=['order_id']
+        unique_key=['order_id'],
         alias="NEW_TABLE_NAME",
         tags=['crm'],
         docs={'node_color': 'red'},
