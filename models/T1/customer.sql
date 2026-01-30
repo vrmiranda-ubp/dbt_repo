@@ -1,16 +1,17 @@
 -- customer.sql
 -- database="",
--- alias="",
--- tags="",
+
 -- pre-hook="",
 -- post-hook="",
-
+-- static_analysis: on | unsafe | off
 -- grants={'select': ['reporter', 'viewer']}  
 -- full_refresh="",
 {{
     config(
         materialized="incremental",
-        unique_key='C_CUSTKEY',
+        unique_key='ID',
+        tags="CRM",
+        alias="ALIAS_TEST",
         snowflake_warehouse='COMPUTE_WH'
     )
 }}
