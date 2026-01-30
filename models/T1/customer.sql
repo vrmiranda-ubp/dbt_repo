@@ -16,8 +16,7 @@
         enabled=true,
         event_time='session_start_time',
         full_refresh = true,
-        snowflake_warehouse='COMPUTE_WH'
-        
+        snowflake_warehouse='COMPUTE_WH'        
     )
 }}
 
