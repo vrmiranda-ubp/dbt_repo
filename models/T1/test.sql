@@ -3,7 +3,7 @@
         materialized="incremental",
         tags=['test'],
         enabled=true,
-        event_time='O_ORDERDATE',
+        event_time='TEST',
         full_refresh = true,
         snowflake_warehouse='COMPUTE_WH'        
     )
