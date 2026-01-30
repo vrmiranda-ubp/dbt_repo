@@ -9,7 +9,7 @@
 {{
     config(
         materialized="incremental",
-        unique_key='id_test',
+        unique_key='C_NATIONKEY',
         alias="NEW_TABLE_NAME",
         tags=['crm'],
         docs={'node_color': 'red'},
