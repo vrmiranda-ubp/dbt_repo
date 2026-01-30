@@ -10,7 +10,7 @@
     config(
         materialized="incremental",
         unique_key='C_NATIONKEY',
-        alias="NEW_TABLE_NAME",
+        alias="customer",
         tags=['crm'],
         docs={'node_color': 'red'},
         enabled=true,
