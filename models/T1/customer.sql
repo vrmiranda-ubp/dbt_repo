@@ -10,7 +10,6 @@
     config(
         materialized="incremental",
         unique_key='ID',
-        tags="CRM",
         alias="NEW_TABLE_NAME",
         tags=['crm'],
         docs={'node_color': 'red'},
