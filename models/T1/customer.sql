@@ -12,7 +12,7 @@
         tags="CRM",
         alias="NEW_TABLE_NAME",
         +docs:
-            node_color: "#cd7f32"        
+            node_color: "#cd7f32",
         snowflake_warehouse='COMPUTE_WH'
     )
 }}
