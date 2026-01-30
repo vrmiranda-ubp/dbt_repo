@@ -7,11 +7,13 @@ sources:
       - name: customer
         description: "Raw customer data from the CRM system."
         columns:
-          - name: C_NATIONKEY
-            description: "Nation Key."
+          - name: C_CUSTKEY
+            description: "Unique identifier for a customer."
             tests:
               - not_null
-              - unique            
+              - unique
+          - name: C_NAME
+            description: "Full name of the customer."         
       - name: orders
         description: "Raw order data from the e-commerce platform."
         columns:
