@@ -1,8 +1,7 @@
 -- customer.sql
 -- database="",
-
--- pre-hook="",
--- post-hook="",
+-- pre_hook="SQL-statement" | ["SQL-statement"],
+-- post_hook="SQL-statement" | ["SQL-statement"],
 -- static_analysis: on | unsafe | off
 -- grants={'select': ['reporter', 'viewer']}  
 -- full_refresh="",
@@ -11,7 +10,9 @@
         materialized="incremental",
         unique_key='ID',
         tags="CRM",
-        alias="ALIAS_TEST",
+        alias="NEW_TABLE_NAME",
+        +docs:
+            node_color: "#cd7f32"        
         snowflake_warehouse='COMPUTE_WH'
     )
 }}
