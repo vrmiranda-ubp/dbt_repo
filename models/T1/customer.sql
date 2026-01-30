@@ -8,7 +8,7 @@
 -- full_refresh="",
 {{
     config(
-        materialized="incremental",
+        materialized="table",
         unique_key='C_NATIONKEY',
         alias="customer",
         tags=['crm'],
